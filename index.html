@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="register.css"/>
+    </head>
+    <body>
+        <form id='container' method="POST" >
+            <h2 class="sign_up">Sign Up</h2>
+            <p class='message'>Join our amazing world today!</p>
+            <label for='firstName' >First Name: </label>  <input type="name" onkeydown="return alphaOnly(event)" required name='firstName' class='firstName'/>
+            <label for='lastName'>Last Name: </label>  <input type="name" onkeydown="return alphaOnly(event)" required name='lastName'  class='lastName'/>
+            <label for='email'>Email: <span id='validemail'></span></label>  <input type="email"  name='email' onkeyup='validEmail();' class='email'/>
+            <label for='password'> Enter Password: <span id='passw'></span></label><input type="password"  onkeyup="passwordLen(); passwordCheck()" name='password' class='password'/> 
+            <label for='con_password'> Confirm Password:<span id='message'></span></label><input type="password" onkeyup="passwordCheck(); enableButton()"  min="8" name='con_password' class='con_password'/>          
+             <button type='button' value='Register'  class='submit' disabled onclick="load(); loading()">Register<div class='loading_ring'></div></button>
+             <p class='login'>Already have an account? <a href="login.html"> Log In</a></p>
+             </form>
+<script  type="text/javascript" src="form.js"></script>
+    </body>
+</html>

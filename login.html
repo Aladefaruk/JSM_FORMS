@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="register.css"/>
+    </head>
+    <body>
+        <form id='container' method="POST" >
+            <h2 class="sign_up">Log In</h2>
+            <p class="message">Welcome back! &#9749</p>
+            <label for='email'>Email: <span id='validemail'></span></label>  <input type="email"  required name='email' class="email" onkeyup="validEmail()"/>
+            <label for='password'> Enter Password: <span id='passw'></span></label><input type="password"  onkeyup="passwordLen();login_enableButton()" name='password' class='password'/>          
+             <button  type="button" value='Log In' class='submit' disabled onclick="load(); loading()">Log In <div class='loading_ring'></div></button>
+             </form>
+
+<script  type="text/javascript" src="form.js"></script>
+    </body>
+</html>
